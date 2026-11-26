@@ -1,15 +1,17 @@
+// src/index.d.ts
+
 type Gender = 'male' | 'female';
 
-interface User {
+interface Person {
     name: string;
     age: number;
     gender: Gender;
 }
 
-interface Employee extends User {
+interface Employee extends Person {
     company: string;
 }
 
-declare function getPersons(): User[];
+declare function getPersons(): Person[];
 
-declare function personToString(person: User | Employee): string;
+declare function personToString(person: Person | Employee): string;
